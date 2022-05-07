@@ -1,0 +1,14 @@
+Lab 4 Instructions
+
+Write and run a program that can evaluate an expression
+
+Assume that you have 8-bit registers. 
+Write and run a program to evaluate the following expression:
+  AL = (AL – DL) + CL - BL
+Store the following decimal values into the registers
+Store 245 to AL register
+Store 41 to BL register
+Store 11 to CL register
+Store 215 to DL register
+Evaluate the above expression
+Result should be at AL register at the end

@@ -1,0 +1,57 @@
+Lab 5 Instructions
+
+Lab 5A
+Create a project and generate listing file 
+
+Write and run a program with following instructions:
+  mov 20 to AL register
+  mov 100 to AX register
+  mov 1000 to EAX register
+  add 2 to the content of EAX register
+  subtract 20 from al register
+Generate listing file for the program
+
+
+Lab 5B
+Write a program to evaluate an expression variables
+
+Write a program to implement the following expression in assembly:
+EAX = Xval - (Yval + Zval)
+Xval is signed 32-bit integer variable
+Yval and Zval are unsigned 32-bit integer variable
+Assign Xval 26, Yval 30, and  Zval 40.
+
+
+
+Lab 5C
+Write a program to see the data items in an array
+
+Use DUP to allocate (create space for) an array or string. 
+ Syntax:                            counter DUP ( argument )
+ Counter and argument must be constants or constant expressions
+
+var1 BYTE 20 DUP(0)	; 20 bytes, all equal to zero
+var2 BYTE 20 DUP(?)	; 20 bytes, uninitialized
+var3 BYTE 4 DUP("STACK")   ; 20 bytes: "STACKSTACKSTACKSTACK"
+var4 BYTE 10,3 DUP(0),20	; 5 bytes
+
+
+Lab 5D
+Write a program to find the size of the string
+
+; Calculating the size of the String
+.386
+.model flat, stdcall
+.stack 4096
+ExitProcess proto, dwExitCode:dword
+.data
+myString byte "This is a very long string made by your instructor to test how $ works in this lab hope you will like it"
+myString_length = ($ - myString)
+.code
+main proc
+	mov eax,0
+	mov al, myString_length
+　
+invoke ExitProcess,0
+main endp
+end main

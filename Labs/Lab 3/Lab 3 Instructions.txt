@@ -1,0 +1,22 @@
+Lab 3 instructions
+
+Part 3A : Load and build an existing project
+Now download a project from the link:
+https://tinyurl.com/lab3codefall21
+Click Direct Download
+
+
+
+Part 3B: Debug the project
+Debug the rest of the code one line at a time. 
+There is an answer sheet provided with the lab. 
+After executing each line record the register value in the answer sheet. 
+Then also provide short explanation for the changes. 
+
+
+
+Part 3C: Math problems
+Problem 1: Suppose a program contains  500 million instructions to execute on a processor running on 2.2 GHz. Half of the instructions takes 3 clock cycles to execute, where rest of the instructions take 10 clock cycle. What is the execution time of the program?
+
+Problem 2: A processor is 20 MIPS. If you run a program on that processor and the program takes 30 seconds to finish. How many instructions are there in this program?
+

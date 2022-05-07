@@ -1,0 +1,31 @@
+Lab 2 Instructions 
+
+Lab 2A
+1. Run the following sample assembly language code
+.386
+.model flat, stdcall
+.stack 4096
+
+ExitProcess PROTO, dwExitCode:DWORD
+
+.code
+main PROC
+	mov eax, 5
+	add eax, 6
+
+INVOKE ExitProcess,0
+main ENDP
+END main
+
+
+Lab 2B
+2. Solve the following Math Problems
+problem 1: Design a 8-bit full adder. Draw the block diagram
+
+problem 2: Draw the circuit for the following Boolean expression: 
+P = (X and Y) or (not X or Z)       
+
+
+Lab 2C
+3. Problems related to registers and Memory
+problem 1: Store the following value in EAX register: 12784569h

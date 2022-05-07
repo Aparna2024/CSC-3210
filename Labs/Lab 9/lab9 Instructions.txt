@@ -1,0 +1,75 @@
+Lab 9 Instructions 
+
+Lab 9A Indirect addressing and Indexed operands
+
+Problem 1: Write and run a program to find the values of each destination operand:
+
+.data
+myBytes BYTE 10h,20h,30h,40h
+myWords WORD 8Ah,3Bh,72h,44h,66h
+myDoubles DWORD 1,2,3,4,5
+myPointer DWORD myDoubles
+.code
+mov esi,OFFSET myBytes
+mov al,[esi]   	; indirect access  ; a. AL =
+mov al,[esi+3]   ; b. AL =
+mov esi,OFFSET myWords + 2
+mov ax,[esi]   ; c. AX =
+mov edi,8     	; indexed Operand
+mov edx,[myDoubles + edi]   ; d. EDX =
+mov edx,myDoubles[edi]   ; e. EDX =
+mov ebx,myPointer
+mov eax,[ebx+4] 
+
+
+Lab 9B Loop instruction
+Problem 2: Write and run a program to find the values of each destination operand:
+
+; Summing an Array (SumArray.asm)
+.data
+intarray DWORD 10000h,20000h,30000h,40000h
+
+.code
+main PROC
+mov edi,OFFSET intarray        	; 1: EDI = address of intarray
+mov ecx,LENGTHOF intarray  	; 2: initialize loop counter
+mov eax,0                                 	; 3: sum = 0
+L1:                                                 ; 4: mark beginning of loop
+add eax,[edi]                             	; 5: add an integer
+add edi,TYPE intarray              	; 6: point to next element
+loop L1                                     	; 7: repeat until ECX = 0
+
+
+Lab 9 C Nested Loop
+Problem 3: Write and run a program to find the values of each destination operand:
+
+.data
+temp dword ?
+.code
+mov eax,0
+mov ecx,10   ; outer loop counter
+L1:
+  	mov eax,3
+  	mov temp,ecx
+  	mov ecx,5   ; inner loop counter
+L2:
+  	add eax,5
+  	loop L2 	  ; repeat inner loop
+  	mov ecx, temp    	
+loop L1                   ; repeat outer loop
+
+
+
+Lab 9D logical instruction
+
+Problem 4: Write and run a program to find the values of each destination operand:
+
+.code
+mov al,01101111b
+and al,00101101b   ; a. Al=
+mov al,6Dh
+and al,4Ah   ; b. Al=
+mov al,00001111b
+or al,61h   ; c. Al=
+mov al,94h
+xor al,37h   ; d. Al= 

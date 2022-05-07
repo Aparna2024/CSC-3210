@@ -1,0 +1,9 @@
+Lab 12 instructions 
+Example1:   var4 = (var1 * var2) / (var3 * 5)
+
+; Assume signed operands 32 bit
+ evaluate this expression
+Var1 is initialized with 100
+Var2 is initialized with 200
+Var3 is initialized with 50
+

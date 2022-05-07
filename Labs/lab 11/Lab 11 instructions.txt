@@ -1,0 +1,17 @@
+Lab 11 instructions
+
+Convert the following pseudo code into assembly code.
+
+Int array_list[] = {10,11,13,18,21,23,24,17,45};
+Int array_size = sizeof array_list/ sizeof sample;
+Int index = 0; // index for while loop
+Int sum = 0; //accumulate the result 
+
+for(current_size = array_size; current_size>0; current_size--){
+while(index <current_size){
+if(array_list[index] os even){
+Sum += array_list[index];
+}
+Index += 1;
+}
+}

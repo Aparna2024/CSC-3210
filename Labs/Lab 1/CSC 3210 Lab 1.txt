@@ -1,0 +1,20 @@
+Lab 1
+
+In this lab we will install Microsoft Visual Studio on either Mac or Windows. 
+Submission Instruction: 
+Complete the installation process of Microsoft Visual Studio 2019
+Run Microsoft Visual Studio
+Take a screenshot 
+Submit to the dropbox at iCollege
+
+Lab 1 b: solve the provided problems 
+1. Subtract the following hexadecimal numbers
+  7ACD - 3AFE = ? 
+Show the computation in details with all the carries.  Result should be Hexadecimal 
+
+2.Convert 01110110 into 2’s Complement form
+
+3. Subtract the following Octal numbers
+ 765 – 377 
+Show the steps with carries. Result is a octal number 
+

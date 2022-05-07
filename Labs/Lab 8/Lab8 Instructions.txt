@@ -1,0 +1,68 @@
+Lab 8 Instructions
+
+Lab 8A: OFFSET operator
+
+Write and run a program to find the values of each destination operand:
+
+.data
+myBytes  	BYTE 10h,20h,30h,40h
+myWords	WORD 8Ah,3Bh,72h,44h,66h
+myDoubles DWORD 1,2,3,4,5
+myPointer   DWORD myDoubles
+
+.code
+mov esi, OFFSET myBytes
+mov ax, [esi]  ; a. AX =
+mov eax, DWORD PTR myWords   ; b. EAX =
+mov esi, myPointer
+mov ax, [esi+2]   ; c. AX =
+mov ax, [esi+6]   ; d. AX =
+mov ax, [esi-4]   ; e. AX =
+
+
+
+Lab 8B: PTR operator
+
+Write and run a program to find the values of each destination operand:
+
+.data
+varB BYTE  65h,31h,02h,05h
+varW WORD  6543h,1202h
+varD DWORD 12345678h
+.code
+mov ax, WORD PTR [varB+2]  ; a.
+mov bl, BYTE PTR  varD  ; b.
+mov bl, BYTE PTR [varW+2]  ; c.
+mov ax, WORD PTR [varD+2]  ; d.
+mov eax, DWORD PTR varW  ; e.
+
+
+Lab 8C: Checking memory data
+
+Write and run a program to find the values of a memory location and a register:
+
+.data
+  dVal DWORD ?
+.code
+mov dVal,12345678h
+mov ax,WORD PTR dVal+2
+add ax,3
+mov WORD PTR dVal,ax               	; dVal=
+mov eax,dVal                                 	;EAX=
+
+Lab 8D: Type, Length, and SIZEOF operator 
+
+Write and run a program to find the values of each destination operand:
+.data
+myBytes BYTE 10h,20h,30h,40h
+myWords WORD 3 DUP(?),2000h
+myString BYTE "ABCDE"
+.code
+mov eax, TYPE myBytes   ; a.
+mov eax, LENGTHOF myBytes   ; b.
+mov eax, SIZEOF myBytes   ; c.
+mov eax, TYPE myWords   ; d.
+mov eax, LENGTHOF myWords   ; e.
+mov eax, SIZEOF myWords   ; f.
+mov eax, SIZEOF myString   ; g.
+

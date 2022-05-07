@@ -1,0 +1,13 @@
+Lab 10 instructions 
+
+Write an assembly program to find the largest item in an array and store it in a variable named MAXIMUM.
+•Hint: Use both Jump and loop instructions to write the program.
+•logic:
+•Assume that the first item of the array is the maximum and store it in variable MAXIMUM
+•Write a loop. Inside the loop, compare the each array item with the maximum
+•If the array item is greater than the MAXIMUM, update MAXIMUM with that array item.
+.data
+  Array WORD 10, 2, 23, 45, 21, 11
+  MAXIMUM WORD ?
+.code
+  ; write your code
